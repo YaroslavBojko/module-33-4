@@ -10,14 +10,22 @@ void input(T array[8])
     }
 }
 
+template <typename T>
+void average(T array[8])
+{
+    T sum = 0;
+    for (int i = 0; i < 8; ++i)
+    {
+        sum += array[i];
+    }
+
+    std::cout << "Average = " << sum / 8 << std::endl;
+}
+
 int main() {
     int array[8];
     //double array[8];
 
     input(array);
-
-    for (int i = 0; i < 8; ++i)
-    {
-        std::cout << array[i] << " ";
-    }
+    average(array);
 }
